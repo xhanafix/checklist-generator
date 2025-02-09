@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <header>
+            <h1>Checklist Generator</h1>
+            <p>AI-powered checklist creation for any project or task</p>
+        </header>
+
+        <main>
+            <section id="api-key-section">
+                <div class="api-key-container">
+                    <input type="password" id="api-key" placeholder="Enter OpenRouter API Key">
+                    <button id="save-api-key">Save API Key</button>
+                    <button id="reset-api-key">Reset API Key</button>
+                </div>
+            </section>
+
+            <section id="checklist-generator">
+                <div class="language-selector">
+                    <label>Output Language:</label>
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="ms">Bahasa Malaysia</option>
+                    </select>
+                </div>
+                <textarea id="task-input" placeholder="Describe your project or task..."></textarea>
+                <button id="generate-btn">Generate Checklist</button>
+                
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Generating your checklist...</p>
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                        <span class="progress-text">0%</span>
+                    </div>
+                </div>
+
+                <div id="checklist-output" class="hidden">
+                    <div class="checklist-controls">
+                        <button id="print-btn">Print Checklist</button>
+                    </div>
+                    <div id="checklist-objective" class="checklist-objective"></div>
+                    <table id="checklist-table">
+                        <thead>
+                            <tr>
+                                <th width="5%">Done</th>
+                                <th width="85%">Task</th>
+                                <th width="10%">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="checklist-items"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by OpenRouter AI</p>
+            <p>&copy; 2025 <a href="https://hanafihassan.com" target="_blank">hanafihassan.com</a>. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
